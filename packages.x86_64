@@ -1,0 +1,6 @@
+grub-pc-bin
+grub-efi
+grub-efi-ia32-bin
+linux-image-amd64
+wget
+busybox-static

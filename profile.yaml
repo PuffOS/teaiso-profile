@@ -1,0 +1,20 @@
+name: PuffOS
+distro: debian
+codename: unstable
+publisher: PuffOS <https://debian.org>
+label: PuffOS
+application_id: PuffOS Live
+airootfs_directory_pre: airootfs_pre
+arch: x86_64
+grub_cfg: grub.cfg
+packages:
+ - packages.x86_64
+ - gnome.x86_64
+ - firmware.x86_64
+file_permissions:
+ - /etc/shadow|0:0:400
+customize_airootfs:
+ - customize-airootfs.sh
+customize_airootfs_pre:
+ - accept_nonfree.sh
+repository: https://pkgmaster.devuan.org/merged
