@@ -22,7 +22,7 @@ jobs:
           sudo make && sudo make install
           cd ..
           pwd
-          sudo mkteaiso -p ./
+          sudo mkteaiso -p /home/runner/work/teaiso-profile/teaiso-profile
           sudo mkdir -p /output
           sudo mv /var/teaiso/output/*.iso /output/puffos-daily.iso
 
