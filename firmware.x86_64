@@ -1,3 +1,4 @@
+bluez-firmware
 firmware-amd-graphics
 firmware-atheros
 firmware-bnx2
@@ -13,7 +14,14 @@ firmware-linux
 firmware-linux-free
 firmware-linux-nonfree
 firmware-misc-nonfree
+firmware-myricom
+firmware-netxen
+firmware-qlogic
+firmware-ralink
+firmware-realtek
 firmware-samsung
 firmware-siano
+firmware-sof-signed
 firmware-ti-connectivity
 firmware-zd1211
+zd1211-firmware
