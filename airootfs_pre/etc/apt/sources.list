@@ -1,3 +1,6 @@
+deb https://pkgmaster.devuan.org/merged unstable main contrib non-free
+deb https://deb.debian.org/debian unstable main contrib non-free
+
 deb https://pkgmaster.devuan.org/merged testing main contrib non-free
 deb https://deb.debian.org/debian testing main contrib non-free
 
@@ -6,5 +9,3 @@ deb https://deb.debian.org/debian stable main contrib non-free
 
 deb https://pkgmaster.devuan.org/merged oldstable main contrib non-free
 deb https://deb.debian.org/debian oldstable main contrib non-free
-
-
