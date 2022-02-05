@@ -1,6 +1,6 @@
 name: PuffOS
 distro: debian
-codename: unstable
+codename: testing
 publisher: PuffOS <https://debian.org>
 label: PuffOS
 application_id: PuffOS Live
