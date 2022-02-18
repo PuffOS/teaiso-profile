@@ -6,4 +6,8 @@ file-roller
 nautilus
 lightdm
 gedit
+xinit
+xserver-xorg
+python3-dbus
+policykit-1-gnome
 --no-install-recommends
