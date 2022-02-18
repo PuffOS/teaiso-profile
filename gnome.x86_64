@@ -3,6 +3,7 @@ gnome-shell
 gnome-terminal
 chromium
 file-roller
-evince
 nautilus
 lightdm
+gedit
+--no-install-recommends
