@@ -13,4 +13,5 @@ xserver-xorg
 python3-dbus
 policykit-1-gnome
 pulseaudio
+gnome-themes-standard
 --no-install-recommends
