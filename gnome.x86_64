@@ -12,4 +12,5 @@ network-manager-gnome
 xserver-xorg
 python3-dbus
 policykit-1-gnome
+pulseaudio
 --no-install-recommends
