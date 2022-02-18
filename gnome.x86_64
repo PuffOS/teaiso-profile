@@ -7,6 +7,8 @@ nautilus
 lightdm
 gedit
 xinit
+gnome-control-center
+network-manager-gnome
 xserver-xorg
 python3-dbus
 policykit-1-gnome
