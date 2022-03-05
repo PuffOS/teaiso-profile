@@ -7,7 +7,8 @@ application_id: PuffOS Live
 airootfs_directory_pre: airootfs_pre
 arch: x86_64
 grub_cfg: grub.cfg
-linux_args: quiet 
+linux_args: quiet
+variant: minbase
 packages:
  - packages.x86_64
  - gnome.x86_64
