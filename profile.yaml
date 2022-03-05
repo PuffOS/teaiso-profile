@@ -8,7 +8,7 @@ airootfs_directory_pre: airootfs_pre
 arch: x86_64
 grub_cfg: grub.cfg
 linux_args: quiet
-variant: minbase
+variant: minbase --include=devuan-keyring
 packages:
  - packages.x86_64
  - gnome.x86_64
