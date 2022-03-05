@@ -9,6 +9,7 @@ arch: x86_64
 grub_cfg: grub.cfg
 linux_args: quiet
 variant: minbase
+keyring_package: devuan-keyring
 packages:
  - packages.x86_64
  - gnome.x86_64
