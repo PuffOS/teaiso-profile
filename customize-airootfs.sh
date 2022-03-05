@@ -33,6 +33,9 @@ apt autoremove -yq
 rm -f /bin/sh
 ln -s bash /bin/sh
 
+# Purge sudo and other useless stuff
+apt purge sudo
+
 #### Disable recommends by default
 cat > /etc/apt/apt.conf.d/01norecommend << EOF
 APT::Install-Recommends "0";
