@@ -34,7 +34,7 @@ rm -f /bin/sh
 ln -s bash /bin/sh
 
 # Purge sudo and other useless stuff
-apt purge sudo
+apt purge sudo -yq
 
 #### Disable recommends by default
 cat > /etc/apt/apt.conf.d/01norecommend << EOF
