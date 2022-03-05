@@ -34,6 +34,7 @@ rm -f /bin/sh
 ln -s bash /bin/sh
 
 # Purge sudo and other useless stuff
+export SUDO_FORCE_REMOVE=yes
 apt purge sudo -yq
 
 #### Disable recommends by default
