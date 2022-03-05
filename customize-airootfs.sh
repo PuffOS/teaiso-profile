@@ -33,9 +33,11 @@ apt autoremove -yq
 rm -f /bin/sh
 ln -s bash /bin/sh
 
-# Purge sudo and other useless stuff
+# Remove sudo
 export SUDO_FORCE_REMOVE=yes
 apt purge sudo -yq
+pass="live"
+echo -e "$pass\n$pass\n" | passwd
 
 #### Disable recommends by default
 cat > /etc/apt/apt.conf.d/01norecommend << EOF
