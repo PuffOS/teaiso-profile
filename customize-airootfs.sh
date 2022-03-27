@@ -44,3 +44,9 @@ cat > /etc/apt/apt.conf.d/01norecommend << EOF
 APT::Install-Recommends "0";
 APT::Install-Suggests "0";
 EOF
+
+#### Remove kernel update hooks
+rm -f /etc/kernel/*/* || true
+
+### Remove gnome-tracker daemons
+rm -f /usr/libexec/tracker-* || true
