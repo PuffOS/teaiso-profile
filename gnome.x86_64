@@ -6,6 +6,7 @@ lightdm
 xinit
 gnome-control-center
 network-manager-gnome
+wpasupplicant
 xserver-xorg
 python3-dbus
 policykit-1-gnome
