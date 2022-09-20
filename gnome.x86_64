@@ -12,5 +12,5 @@ python3-dbus
 policykit-1-gnome
 pulseaudio
 nautilus-extension-gnome-terminal
-gnome-themes-standard
+gnome-themes-extra
 --no-install-recommends
