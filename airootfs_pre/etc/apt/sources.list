@@ -1,2 +1,4 @@
 deb https://pkgmaster.devuan.org/merged unstable main contrib non-free
+deb https://pkgmaster.devuan.org/merged testing main contrib non-free
+deb https://pkgmaster.devuan.org/merged oldstable main contrib non-free
 
