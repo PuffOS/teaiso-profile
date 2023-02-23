@@ -4,35 +4,31 @@ on:
   push:
     branches: [ master ]
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * 6"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    compile:
+        name: Teaiso
+        runs-on: ubuntu-latest
+        steps:
+          - name: Check out the repo
+            uses: actions/checkout@v2
+          - name: Run the build process with Docker
+            uses: addnab/docker-run-action@v3
+            with:
+                image: debian:testing
+                options: -v ${{ github.workspace }}:/root -v /output:/output
+                run: |
+                    cd /root
+                    bash build.sh
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: build
-        run: |
-          set -ex
-          sudo apt update
-          sudo apt install xorriso grub-pc-bin grub-efi mtools make python3 dosfstools e2fsprogs squashfs-tools python3-yaml gcc wget curl unzip xz-utils debootstrap git erofs-utils zstd --no-install-recommends
-          git clone https://gitlab.com/tearch-linux/applications-and-tools/teaiso
-          cd teaiso
-          sudo make && sudo make install
-          cd ..
-          pwd
-          sudo mkteaiso -p /home/runner/work/teaiso-profile/teaiso-profile
-          sudo mkdir -p /output
-          sudo mv /var/lib/teaiso/output/*.iso /output/puffos-daily.iso
+          - uses: "marvinpinto/action-automatic-releases@latest"
+            with:
+                repo_token: "${{ secrets.GITHUB_TOKEN }}"
+                automatic_release_tag: "current"
+                prerelease: false
+                title: "Latest release"
+                files: |
+                  /output/*
 
-
-      - uses: "marvinpinto/action-automatic-releases@latest"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "main"
-          prerelease: false
-          title: "Daily build"
-          files: |
-            /output/*
 
