@@ -18,13 +18,13 @@ cd /tmp/
 wget https://github.com/PuffOS/base-files/releases/download/v1/base-files_9999-noupdate_amd64.deb
 wget https://github.com/PuffOS/desktop-base/releases/download/1/desktop-base_9999-noupdate_all.deb
 wget https://github.com/PuffOS/17g-installer/releases/download/current/17g-installer_1.0_all.deb
-wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session-bin_9999_all.deb
-wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session-common_9999_all.deb
-wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session_9999_all.deb
+#wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session-bin_9999_all.deb
+#wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session-common_9999_all.deb
+#wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session_9999_all.deb
 apt install ./*.deb -yq --allow-downgrades
 rm -f *.deb
 # remove broken sessions (FIXME)
-rm -f /usr/share/wayland-sessions/*
+#rm -f /usr/share/wayland-sessions/*
 rm -f /usr/share/xsessions/lightdm-xsession.desktop
 
 # Purge shitty display manager.
