@@ -30,7 +30,7 @@ rm -f /usr/share/xsessions/lightdm-xsession.desktop
 #### fix eudev sed bug about usrmerge shit
 # install busybox into /bin as symlink
 apt install busybox-static -yq 
-/bin/busybox --install -s /bin
+busybox --install -s /bin
 
 # Purge shitty display manager.
 apt purge gdm3 -yq
