@@ -17,8 +17,8 @@ packages:
 file_permissions:
  - /etc/shadow|0:0:400
 customize_airootfs:
- - customize-airootfs.sh
  - librewolf.sh
 customize_airootfs_pre:
+ - customize-airootfs.sh
  - accept_nonfree.sh
 repository: https://pkgmaster.devuan.org/merged
