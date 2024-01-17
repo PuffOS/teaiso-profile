@@ -31,6 +31,7 @@ rm -f /usr/share/xsessions/lightdm-xsession.desktop
 # install busybox into /bin as symlink
 apt install busybox-static -yq 
 $(which busybox) --install -s /bin
+ln -s /usr/bin/kmod /sbin/modprobe
 
 # Purge shitty display manager.
 apt purge gdm3 -yq
