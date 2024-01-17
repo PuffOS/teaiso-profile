@@ -21,27 +21,24 @@ wget https://github.com/PuffOS/17g-installer/releases/download/current/17g-insta
 #wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session-bin_9999_all.deb
 #wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session-common_9999_all.deb
 #wget https://github.com/PuffOS/deb-packages/raw/main/gnome-session_9999_all.deb
-apt install ./*.deb -yq --allow-downgrades
+yes | apt install ./*.deb -yq --allow-downgrades
 rm -f *.deb
 # remove broken sessions (FIXME)
 #rm -f /usr/share/wayland-sessions/*
 rm -f /usr/share/xsessions/lightdm-xsession.desktop
 
-#### fix eudev sed bug about usrmerge shit
-# install busybox into /bin as symlink
-apt install busybox-static -yq 
-$(which busybox) --install -s /bin
-ln -s /usr/bin/kmod /sbin/modprobe
+#### non-usrmerge broken
+yes | apt install usrmerge --reinstall -y
 
 # Purge shitty display manager.
-apt purge gdm3 -yq
-apt autoremove -yq
+yes | apt purge gdm3 -yq
+yes | apt autoremove -yq
 rm -f /bin/sh
 ln -s bash /bin/sh
 
 # Remove sudo
 export SUDO_FORCE_REMOVE=yes
-apt purge sudo -yq
+yes | apt purge sudo -yq
 pass="live"
 echo -e "$pass\n$pass\n" | passwd
 
