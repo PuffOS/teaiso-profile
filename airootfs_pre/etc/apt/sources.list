@@ -1,4 +1,5 @@
 deb https://pkgmaster.devuan.org/merged unstable main contrib non-free non-free-firmware
+deb https://deb.debian.org/debian unstable main contrib non-free non-free-firmware
 deb https://pkgmaster.devuan.org/merged testing main contrib non-free non-free-firmware
 deb https://pkgmaster.devuan.org/merged oldstable main contrib non-free non-free-firmware
 
