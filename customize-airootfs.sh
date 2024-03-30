@@ -13,6 +13,8 @@ DPkg::Post-Invoke {"rm -rf /usr/share/doc || true";};
 DPkg::Post-Invoke {"rm -rf /usr/share/info || true";};
 EOF
 
+apt install wget -yq 
+
 # install packages
 cd /tmp/
 wget https://github.com/PuffOS/base-files/releases/download/v1/base-files_9999-noupdate_amd64.deb
