@@ -55,3 +55,8 @@ rm -f /etc/kernel/*/* || true
 
 ### Remove gnome-tracker daemons
 rm -f /usr/libexec/tracker-* || true
+
+### update initramfs
+for dir in $(ls /lib/modules) ; do
+    update-initramfs -u -k $dir
+done
