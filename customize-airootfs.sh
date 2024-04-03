@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -ex
 export DEBIAN_FRONTEND=noninteractive
 
 # fake dummy systemctl command
@@ -51,12 +52,12 @@ APT::Install-Suggests "0";
 EOF
 
 #### Remove kernel update hooks
-rm -f /etc/kernel/*/* || true
+#rm -f /etc/kernel/*/* || true
 
 ### Remove gnome-tracker daemons
-rm -f /usr/libexec/tracker-* || true
+#rm -f /usr/libexec/tracker-* || true
 
 ### update initramfs
-for dir in $(ls /lib/modules) ; do
-    update-initramfs -u -k $dir
-done
+#for dir in $(ls /lib/modules) ; do
+#    update-initramfs -u -k $dir
+#done
